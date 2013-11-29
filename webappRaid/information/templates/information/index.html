@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}DISK INFORMATION:::::{% endblock %}
+
+{% block content %}
+<table class="table table-border">
+<thead>
+<tr><th>Total</th><th>Used</th><th>Free</th></tr>
+</thead>
+<tbody>
+<tr><td>{{ total }}</td><td>{{ used }}</td><td>{{ free }}</td></tr>
+</tbody>
+<tfoot><tr><td colspan="3">Units: (GB)</td></tr></tfoot>
+</table>
+{% endblock %}

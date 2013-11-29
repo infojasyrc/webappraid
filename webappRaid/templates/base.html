@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+{% load url from future %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}DATABASE PROJECT:::::{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jose Antonio Sal y Rosas Celi">
+    {% bootstrap_stylesheet_tag %}
+    {% bootstrap_stylesheet_tag "responsive" %}
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {% bootstrap_javascript_tag %}
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">JRO</a>
+            <ul class="nav">
+                <li><a href="{% url 'information.views.index' %}" class="">Home</a></li>
+                <!-- <li><a href="#">Form</a></li> -->
+                <!-- 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Vertical</a></li>
+                        <li><a href="#">Horizontal</a></li>
+                        <li><a href="#">Inline</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Using template</a></li>
+                    </ul>
+                </li>
+                 -->
+                <!-- 
+                <li><a href="#">Formset</a></li>
+                <li><a href="#">Tabs &amp; Pills</a></li>
+                <li><a href="#">Pagination</a></li>
+                <li><a href="#">Buttons</a></li>
+                <li><a href="#">Contact</a></li>
+                 -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    {% bootstrap_messages %}
+
+    {% block content %}Empty page{% endblock %}
+
+    <p><hr></p>
+
+    <footer class="row">
+        <div class="span6">
+            <p>Jicamarca Radio Observatory</p>
+        </div>
+        <div class="span6" style="text-align:right">
+            <p>
+                &copy; <a href="http://twitter.com/infojasyrc">Developer</a> 2013
+                |
+                <a href="#">license</a>
+            </p>
+        </div>
+    </footer>
+
+</div> <!-- container -->
+
+</body>
+</html>

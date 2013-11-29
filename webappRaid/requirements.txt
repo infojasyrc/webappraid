@@ -1,0 +1,5 @@
+Django==1.4.5
+argparse==1.2.1
+django-bootstrap-toolkit==2.15.0
+wsgiref==0.1.2
+yolk==0.4.3
